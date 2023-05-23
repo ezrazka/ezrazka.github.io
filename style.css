@@ -95,8 +95,9 @@ header {
 
 .content {
     width: 80%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: larger;
+    color: rgb(55, 65, 81)
 }
 
 .content-my-photo, .content-welcome {
@@ -131,7 +132,6 @@ header {
 }
 
 .content-welcome h2 {
-    margin-top: 10px;
     font-size: 2em;
 }
 
