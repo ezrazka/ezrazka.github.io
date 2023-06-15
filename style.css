@@ -226,6 +226,12 @@ section {
 	padding: 20px;
 	margin-left: -200px;
 	transition: 1s;
+	background-color: var(--page-blue);
+	border-top: 5px solid rgb(65, 68, 73);
+	border-left: 5px solid rgb(57, 60, 66);
+	text-shadow: -1px 0 rgb(49, 52, 59), 0 1px rgb(49, 52, 59),
+		1px 0 rgb(49, 52, 59), 0 -1px rgb(49, 52, 59);
+	box-shadow: 5px 5px 10px 0 #161928;
 }
 
 .project-box:hover {
@@ -234,31 +240,31 @@ section {
 
 .project-box:nth-of-type(1) {
 	margin-left: 0;
-	background-color: rgba(166, 0, 255, 0.8);
+	color: rgb(175, 50, 242);
 }
 
 .project-box:nth-of-type(2) {
-	background-color: rgba(0, 238, 255, 0.8);
+	color: rgb(0, 238, 255);
 	top: 50px;
 }
 
 .project-box:nth-of-type(3) {
-	background-color: rgba(255, 0, 0, 0.8);
+	color: rgb(247, 32, 32);
 	top: 100px;
 }
 
 .project-box:nth-of-type(4) {
-	background-color: rgba(11, 236, 101, 0.8);
+	color: rgb(11, 236, 101);
 	top: 150px;
 }
 
 .project-box:nth-of-type(5) {
-	background-color: rgba(249, 249, 5, 0.8);
+	color: rgb(249, 249, 5);
 	top: 200px;
 }
 
 .project-box:nth-of-type(6) {
-	background-color: rgba(253, 46, 184, 0.8);
+	color: rgb(250, 55, 185);
 	top: 250px;
 }
 
