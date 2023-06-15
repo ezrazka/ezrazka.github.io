@@ -1,237 +1,386 @@
+:root {
+	--page-neon: #9effa9;
+	--page-neon-dark: #5fbf6a;
+	--page-blue: #36485e;
+	--page-indigo: #333146;
+	--page-gray: #26242b;
+	--page-black: #29252c;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	background-color: var(--page-indigo);
 }
 
 header {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    color: white;
-    overflow: hidden;
-}
-  
-.parallax-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-image: url("assets/images/header.jpg");
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-position: center;
-    transform: translateZ(0);
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	color: white;
+	overflow: hidden;
 }
 
-.main-nav-container, .main-heading-container {
-  position: relative;
-  z-index: 1;
+.parallax-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-image: url("assets/images/hero.jpg");
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	transform: translateZ(0);
+}
+
+.main-nav-container,
+.main-heading-container {
+	position: relative;
+	z-index: 1;
 }
 
 .main-nav-container {
-    height: 80px;
-    display: flex;
-    justify-content: center;
+	position: fixed;
+	height: 60px;
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	align-items: center;
+	transition: 1s;
+}
+
+.main-nav-container.background {
+	background-color: rgba(54, 72, 94, 0.5);
+	transition: 0.5s;
+}
+
+.main-nav-container .logo {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 2.5rem;
+	font-weight: bold;
 }
 
 .main-nav {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid white;
+	display: flex;
+	align-items: center;
 }
 
 .main-nav ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .main-nav ul li {
-    display: inline;
-    text-transform: uppercase;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding: 0 20px;
+	display: inline;
+	text-transform: uppercase;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	padding-inline: 20px;
 }
 
 .main-nav ul li a {
-    text-decoration: none;
-    color: white;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	transition: 0.25s;
 }
 
 .main-nav ul li a:hover {
-    background-color: rgba(75, 141, 221, 0.5);
+	display: inline-block;
+	color: var(--page-neon);
+	transform: scale(1.1);
 }
 
 .main-heading-container {
-    width: 50%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 100px;
-    margin-left: 10%;
+	width: 50%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	margin-top: 170px;
+	margin-left: 10%;
 }
 
 .main-heading {
-    font-size: 3.5em;
-    font-weight: bold;
+	font-size: 3.5em;
+	font-weight: bold;
 }
 
 .main-heading-description {
-    width: 80%;
-    font-size: 1.5em;
-    margin-top: 35px;
+	width: 80%;
+	font-size: 1.5em;
+	margin-top: 35px;
 }
 
-.section-container {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+section {
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-block: 8vh;
 }
 
 .content {
-    width: 80%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: larger;
-    color: rgb(55, 65, 81)
+	width: 80%;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	font-size: larger;
+	color: gainsboro;
 }
 
-.content-my-photo, .content-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.content-my-photo {
-    width: 40%;
-}
-
-.content-welcome {
-    width: 40%;
-    margin-left: 20px;
+.content-my-photo,
+.content-introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
 }
 
 .content-my-photo {
-    align-items: center;
+	width: 40%;
+}
+
+.content-introduction {
+	width: 40%;
+	margin-left: 20px;
+}
+
+.content-my-photo {
+	align-items: center;
 }
 
 .content-my-photo img {
-    width: 50%;
-    border-radius: 50%;
-    box-shadow: 5px 5px 10px 0px slategray;
-    transition: 0.5s;
+	width: 50%;
+	border-radius: 50%;
+	box-shadow: 5px 5px 10px 0 #161928;
+	transition: 0.5s;
 }
 
 .content-my-photo img:hover {
-    transform: scale(1.1);
-    transition: 1s;
+	transform: scale(1.1);
+	border-radius: 45%;
+	transition: 1s;
 }
 
-.content-welcome h2 {
-    font-size: 2em;
+.content-introduction h2 {
+	font-size: 2em;
+	color: white;
 }
 
-.content-welcome p {
-    margin-top: 25px;
+.content-introduction h2 .gradient {
+	background-image: linear-gradient(
+		to bottom right,
+		var(--page-neon),
+		rgb(14, 224, 3)
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.content-introduction p {
+	margin-top: 25px;
+}
+
+#projects {
+	flex-direction: column;
+	gap: 2rem;
+}
+
+#projects h2 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	font-size: 2rem;
+	color: var(--page-blue);
+}
+
+.project-container {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	transform: skewY(-15deg);
+	/* transform-style: preserve-3d; */
+	padding-bottom: 20%;
+}
+
+.project-box {
+	position: relative;
+	max-width: 25%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	margin-block: 10px;
+	padding: 20px;
+	margin-left: -200px;
+	transition: 1s;
+}
+
+.project-box:hover {
+	transform: translateX(-150px);
+}
+
+.project-box:nth-of-type(1) {
+	margin-left: 0;
+	background-color: rgba(166, 0, 255, 0.8);
+}
+
+.project-box:nth-of-type(2) {
+	background-color: rgba(0, 238, 255, 0.8);
+	top: 50px;
+}
+
+.project-box:nth-of-type(3) {
+	background-color: rgba(255, 0, 0, 0.8);
+	top: 100px;
+}
+
+.project-box:nth-of-type(4) {
+	background-color: rgba(11, 236, 101, 0.8);
+	top: 150px;
+}
+
+.project-box:nth-of-type(5) {
+	background-color: rgba(249, 249, 5, 0.8);
+	top: 200px;
+}
+
+.project-box:nth-of-type(6) {
+	background-color: rgba(253, 46, 184, 0.8);
+	top: 250px;
+}
+
+.project-image img {
+	width: 100%;
+	height: 100%;
 }
 
 footer {
-    width: 100%;
-    height: 50vh;
-    background-color: rgb(69, 47, 151);
+	width: 100%;
+	height: 50vh;
+	background-color: var(--page-black);
 }
 
 .footer-top {
-    width: 100%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+	width: 100%;
+	height: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .footer-text-container {
-    width: 50%;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	width: 50%;
+	color: var(--page-neon);
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .footer-heading {
-    font-size: 2.5em;
+	font-size: 2.5em;
 }
 
 .footer-description {
-    color: silver;
-    margin-top: 20px;
+	color: whitesmoke;
+	margin-top: 20px;
 }
 
 .footer-social-media ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .footer-social-media ul li {
-    display: inline;
-    padding: 0 40px;
+	display: inline;
+	padding-inline: 40px;
 }
 
 .footer-social-media ul li a {
-    text-decoration: none;
-    color: gainsboro;
+	text-decoration: none;
+	color: var(--page-neon-dark);
+}
+
+.footer-social-media ul li a i {
+	transition: 0.3s;
 }
 
 .footer-social-media ul li a i:hover {
-    transform: scale(1.2);
+	transform: translateY(-12px);
+}
+
+.footer-social-media ul li a .fa-instagram:hover {
+	color: #e1306c;
+}
+
+.footer-social-media ul li a .fa-youtube:hover {
+	color: red;
+}
+
+.footer-social-media ul li a .fa-twitter:hover {
+	color: #1da1f2;
 }
 
 .footer-bottom {
-    width: 100%;
-    height: 15%;
-    background-color: rgb(58, 41, 121);
-    border-top: 2px solid rgb(59, 44, 116);
-    display: flex;
-    justify-content: space-between;
+	width: 100%;
+	height: 15%;
+	background-color: var(--page-gray);
+	border-top: 1px solid rgb(32, 29, 34);
+	display: flex;
+	justify-content: space-between;
 }
 
-.copyright, .footer-nav {
-    display: flex;
-    align-items: center;
+.copyright,
+.footer-nav {
+	display: flex;
+	align-items: center;
 }
 
 .copyright {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: whitesmoke;
-    text-shadow: 1px solid black;
-    margin: 15px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	color: whitesmoke;
+	text-shadow: 1px solid black;
+	margin: 15px;
 }
 
 .footer-nav {
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .footer-nav ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .footer-nav ul li {
-    display: inline;
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding: 0 20px;
+	display: inline;
+	text-transform: uppercase;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	padding-inline: 20px;
 }
 
 .footer-nav ul li a {
-    text-decoration: none;
-    color: whitesmoke;
+	display: inline-block;
+	text-decoration: none;
+	color: whitesmoke;
+	transition: 0.25s;
 }
 
 .footer-nav ul li a:hover {
-    background-color: rgba(75, 141, 221, 0.5);
+	color: var(--page-neon);
+	transform: scale(1.1);
 }
