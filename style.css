@@ -84,6 +84,14 @@ header {
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 	font-size: 2.5rem;
 	font-weight: bold;
+	background-image: linear-gradient(
+		to bottom right,
+		var(--page-neon),
+		rgb(14, 224, 3)
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .main-nav {
@@ -239,6 +247,7 @@ section {
 	border-radius: 10px;
 	border-top: 5px solid rgb(65, 68, 73);
 	border-left: 5px solid rgb(57, 60, 66);
+	outline: 2px solid transparent;
 	text-shadow: -1px 0 rgb(49, 52, 59), 0 1px rgb(49, 52, 59),
 		1px 0 rgb(49, 52, 59), 0 -1px rgb(49, 52, 59);
 	box-shadow: 5px 5px 10px 0 #161928;
