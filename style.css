@@ -3,13 +3,29 @@
 	--page-neon-dark: #5fbf6a;
 	--page-blue: #36485e;
 	--page-indigo: #333146;
-	--page-gray: #26242b;
 	--page-black: #29252c;
+	--page-blacker: #26242b;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #292738;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(80, 77, 94);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(64, 61, 77);
 }
 
 html {
@@ -56,12 +72,12 @@ header {
 	width: 100vw;
 	justify-content: space-around;
 	align-items: center;
-	transition: 1s;
+	transition-duration: 1s;
 }
 
 .main-nav-container.background {
 	background-color: rgba(54, 72, 94, 0.5);
-	transition: 0.5s;
+	transition-duration: 0.5s;
 }
 
 .main-nav-container .logo {
@@ -92,7 +108,7 @@ header {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	transition: 0.25s;
+	transition-duration: 0.25s;
 }
 
 .main-nav ul li a:hover {
@@ -163,13 +179,13 @@ section {
 	width: 50%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 10px 0 #161928;
-	transition: 0.5s;
+	transition-duration: 0.5s;
 }
 
 .content-my-photo img:hover {
 	transform: scale(1.1);
 	border-radius: 45%;
-	transition: 1s;
+	transition-duration: 1s;
 }
 
 .content-introduction h2 {
@@ -219,19 +235,19 @@ section {
 .project-box {
 	position: relative;
 	max-width: 25%;
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	margin-block: 10px;
-	padding: 20px;
-	margin-left: -200px;
-	transition: 1s;
 	background-color: var(--page-blue);
+	border-radius: 10px;
 	border-top: 5px solid rgb(65, 68, 73);
 	border-left: 5px solid rgb(57, 60, 66);
 	text-shadow: -1px 0 rgb(49, 52, 59), 0 1px rgb(49, 52, 59),
 		1px 0 rgb(49, 52, 59), 0 -1px rgb(49, 52, 59);
 	box-shadow: 5px 5px 10px 0 #161928;
+	display: flex;
+	flex-direction: column;
+	margin-block: 10px;
+	padding: 20px;
+	margin-left: -200px;
+	transition-duration: 1s;
 }
 
 .project-box:hover {
@@ -243,9 +259,17 @@ section {
 	color: rgb(175, 50, 242);
 }
 
+.project-box:nth-of-type(1):hover {
+	outline: 2px solid rgb(175, 50, 242);
+}
+
 .project-box:nth-of-type(2) {
 	color: rgb(0, 238, 255);
 	top: 50px;
+}
+
+.project-box:nth-of-type(2):hover {
+	outline: 2px solid rgb(0, 238, 255);
 }
 
 .project-box:nth-of-type(3) {
@@ -253,9 +277,17 @@ section {
 	top: 100px;
 }
 
+.project-box:nth-of-type(3):hover {
+	outline: 2px solid rgb(247, 32, 32);
+}
+
 .project-box:nth-of-type(4) {
 	color: rgb(11, 236, 101);
 	top: 150px;
+}
+
+.project-box:nth-of-type(4):hover {
+	outline: 2px solid rgb(11, 236, 101);
 }
 
 .project-box:nth-of-type(5) {
@@ -263,9 +295,22 @@ section {
 	top: 200px;
 }
 
+.project-box:nth-of-type(5):hover {
+	outline: 2px solid rgb(249, 249, 5);
+}
+
 .project-box:nth-of-type(6) {
 	color: rgb(250, 55, 185);
 	top: 250px;
+}
+
+.project-box:nth-of-type(6):hover {
+	outline: 2px solid rgb(250, 55, 185);
+}
+
+.project-box p {
+	color: snow;
+	margin-top: 0.5rem;
 }
 
 .project-image img {
@@ -321,7 +366,7 @@ footer {
 }
 
 .footer-social-media ul li a i {
-	transition: 0.3s;
+	transition-duration: 0.3s;
 }
 
 .footer-social-media ul li a i:hover {
@@ -343,8 +388,8 @@ footer {
 .footer-bottom {
 	width: 100%;
 	height: 15%;
-	background-color: var(--page-gray);
-	border-top: 1px solid rgb(32, 29, 34);
+	border-top: 1px solid rgb(34, 30, 36);
+	background-color: var(--page-blacker);
 	display: flex;
 	justify-content: space-between;
 }
@@ -383,7 +428,7 @@ footer {
 	display: inline-block;
 	text-decoration: none;
 	color: whitesmoke;
-	transition: 0.25s;
+	transition-duration: 0.25s;
 }
 
 .footer-nav ul li a:hover {
