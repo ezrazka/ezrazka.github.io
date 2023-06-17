@@ -72,13 +72,13 @@ header {
 	width: 100vw;
 	justify-content: space-around;
 	align-items: center;
-	transition-duration: 1s;
+	transition: transform 1s color 1s;
 	z-index: 999;
 }
 
 .main-nav-container.background {
 	background-color: rgba(43, 60, 80, 0.5);
-	transition-duration: 0.5s;
+	transition: background-color 0.5s;
 }
 
 .logo {
@@ -117,7 +117,7 @@ header {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	transition-duration: 0.25s;
+	transition: transform 0.25s, color 0.25s;
 }
 
 .main-nav ul li a:hover {
@@ -190,7 +190,7 @@ section {
 	width: 50%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 10px 0 #161928;
-	transition-duration: 0.5s;
+	transition: transform 0.5s;
 	cursor: pointer;
 	backface-visibility: hidden;
 	top: -10%;
@@ -261,7 +261,6 @@ section {
 	align-items: center;
 	flex-wrap: wrap;
 	transform: skewY(-15deg);
-	/* transform-style: preserve-3d; */
 	padding-bottom: 20%;
 }
 
@@ -281,7 +280,7 @@ section {
 	margin-block: 10px;
 	padding: 20px;
 	margin-left: -200px;
-	transition-duration: 1s;
+	transition: transform 1s, outline 0.5s;
 }
 
 .project-card:hover {
@@ -414,7 +413,7 @@ section {
 	border: 2px solid #3a526d;
 	outline: 0;
 	padding-inline: 0.5rem;
-	transition: background-color 0.1s;
+	transition: background-color 0.1s, border 0.3s;
 }
 
 .contact-form textarea {
@@ -446,7 +445,7 @@ section {
 	box-shadow: 2px 2px 4px 0 #161928;
 	opacity: 1;
 	cursor: pointer;
-	transition: opacity 0.3s, border 0.3s, transform 0.3s;
+	transition: transform 0.3s, border 0.3s, opacity 0.3s;
 }
 
 .contact-form:invalid button[type="submit"],
@@ -588,7 +587,7 @@ footer {
 }
 
 .footer-social-media ul li a i {
-	transition-duration: 0.3s;
+	transition: transform 0.3s, color 0.3s;
 }
 
 .footer-social-media ul li a i:hover {
@@ -667,7 +666,7 @@ footer {
 	display: inline-block;
 	text-decoration: none;
 	color: whitesmoke;
-	transition-duration: 0.25s;
+	transition: color 0.25s, transform 0.25s;
 }
 
 .footer-nav ul li a:hover {
