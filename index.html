@@ -127,23 +127,15 @@
             </p>
         </div>
         <div class="content contact-container">
-            <div class="contact-form">
+            <form class="contact-form">
                 <div class="contact-full-name">
-                    <div class="contact-item contact-first-name">
-                        <input type="text" placeholder="&#xf007; First Name">
-                    </div>
-                    <div class="contact-item contact-last-name">
-                        <input type="text" placeholder="&#xf007; Last Name">
-                    </div>
+                    <input type="text" name="firstname" placeholder="&#xf007; First Name" required>
+                    <input type="text" name="lastname" placeholder="&#xf007; Last Name" required>
                 </div>
-                <div class="contact-item contact-email">
-                    <input type="text" placeholder="&#xf0e0; Email Address">
-                </div>  
-                <div class="contact-item contact-message">
-                    <input type="text" placeholder="Your Message">
-                </div>
-                <button type="submit" class="submit-button">Submit</button>
-            </div>
+                <input type="email" name="email" placeholder="&#xf0e0; Email Address" required>
+                <textarea type="text" name="message" placeholder="Your Message" required maxlength="1000"></textarea>
+                <button type="submit">Submit</button>
+            </form>
             <div class="contact-info-container">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
@@ -159,6 +151,7 @@
                     <h3>Follow My Socials</h3>
                     <div class="follow-me">
                         <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
                         <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
                     </div>
                 </div>
@@ -168,7 +161,7 @@
     <footer>
         <div class="footer-top">
             <div class="footer-text-container">
-                <div class="footer-heading">Ezra Azka Einnos</div>
+                <h2 class="footer-heading">Ezra Azka Einnos</h2>
                 <p class="footer-description">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis omnis ipsa eligendi sed
                     repudiandae numquam. In, rem assumenda maxime aperiam quisquam voluptatibus libero atque dolorum,
