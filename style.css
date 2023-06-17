@@ -249,7 +249,7 @@ section {
 	padding-bottom: 20%;
 }
 
-.project-box {
+.project-card {
 	position: relative;
 	max-width: 25%;
 	background-color: var(--page-blue);
@@ -268,65 +268,65 @@ section {
 	transition-duration: 1s;
 }
 
-.project-box:hover {
+.project-card:hover {
 	transform: translateX(-155px);
 }
 
-.project-box:nth-of-type(1) {
+.project-card:nth-of-type(1) {
 	margin-left: 0;
 	color: rgb(175, 50, 242);
 }
 
-.project-box:nth-of-type(1):hover {
+.project-card:nth-of-type(1):hover {
 	outline: 2px solid rgb(175, 50, 242);
 }
 
-.project-box:nth-of-type(2) {
+.project-card:nth-of-type(2) {
 	color: rgb(0, 238, 255);
 	top: 50px;
 }
 
-.project-box:nth-of-type(2):hover {
+.project-card:nth-of-type(2):hover {
 	outline: 2px solid rgb(0, 238, 255);
 }
 
-.project-box:nth-of-type(3) {
+.project-card:nth-of-type(3) {
 	color: rgb(247, 32, 32);
 	top: 100px;
 }
 
-.project-box:nth-of-type(3):hover {
+.project-card:nth-of-type(3):hover {
 	outline: 2px solid rgb(247, 32, 32);
 }
 
-.project-box:nth-of-type(4) {
+.project-card:nth-of-type(4) {
 	color: rgb(11, 236, 101);
 	top: 150px;
 }
 
-.project-box:nth-of-type(4):hover {
+.project-card:nth-of-type(4):hover {
 	outline: 2px solid rgb(11, 236, 101);
 }
 
-.project-box:nth-of-type(5) {
+.project-card:nth-of-type(5) {
 	color: rgb(249, 249, 5);
 	top: 200px;
 }
 
-.project-box:nth-of-type(5):hover {
+.project-card:nth-of-type(5):hover {
 	outline: 2px solid rgb(249, 249, 5);
 }
 
-.project-box:nth-of-type(6) {
+.project-card:nth-of-type(6) {
 	color: rgb(250, 55, 185);
 	top: 250px;
 }
 
-.project-box:nth-of-type(6):hover {
+.project-card:nth-of-type(6):hover {
 	outline: 2px solid rgb(250, 55, 185);
 }
 
-.project-box p {
+.project-card p {
 	color: snow;
 	margin-top: 0.5rem;
 }
@@ -397,7 +397,7 @@ section {
 	background-color: #354960;
 	color: silver;
 	border-radius: 7px;
-	border: 1px solid #3a526d;
+	border: 2px solid #3a526d;
 	outline: 0;
 	padding-inline: 0.5rem;
 	transition: background-color 0.1s;
@@ -418,11 +418,11 @@ section {
 }
 
 .submit-button {
-	width: 4rem;
+	width: 6rem;
 	height: 2rem;
-	background-color: var(--page-neon);
+	background-image: radial-gradient(var(--page-neon), rgb(70, 217, 63));
 	border: 2px solid var(--page-neon-dark);
-	border-radius: 12px;
+	border-radius: 1rem;
 	box-shadow: 2px 2px 4px 0 #161928;
 	opacity: 1;
 	cursor: not-allowed;
