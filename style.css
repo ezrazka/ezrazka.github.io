@@ -414,13 +414,14 @@ section {
 
 .contact-item input:focus {
 	background-color: #2b3a4b;
-	border: 1px solid #2f435a;
+	border: 2px solid #2f435a;
 }
 
 .submit-button {
 	width: 6rem;
 	height: 2rem;
 	background-image: radial-gradient(var(--page-neon), rgb(70, 217, 63));
+	color: var(--page-blacker);
 	border: 2px solid var(--page-neon-dark);
 	border-radius: 1rem;
 	box-shadow: 2px 2px 4px 0 #161928;
