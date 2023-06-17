@@ -14,7 +14,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="parallax-background"></div>
         <div class="main-nav-container">
             <div class="logo">ezrazka</div>
@@ -35,18 +35,21 @@
             </p>
         </div>
     </header>
-    <section id="home">
+    <section id="about">
         <div class="content content-my-photo">
             <img src="./assets/images/jeff_bezos.jpg" alt="My Photo">
         </div>
         <div class="content content-introduction">
-            <h2>Hi, my name is <span class="gradient">Ezra</span>.</h2>
+            <h3>Hi, my name is <span class="gradient">Ezra</span>.</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quis. Incidunt eos delectus eveniet
-                minima fugiat! Doloremque ut odit nesciunt blanditiis magni aperiam, nihil ullam culpa nulla sequi
-                placeat, deleniti, nobis amet aliquid quidem laborum ex commodi! Deleniti explicabo, blanditiis
+                minima fugiat!<br><br>
+                Doloremque ut odit nesciunt blanditiis magni aperiam, nihil ullam culpa nulla sequi
+                placeat, deleniti, nobis amet aliquid quidem laborum ex commodi!<br><br>
+                Deleniti explicabo, blanditiis
                 voluptatum, sint nisi esse velit necessitatibus voluptatibus nobis quis, dolore beatae quidem
-                distinctio? Dignissimos eum alias voluptatibus autem nobis excepturi?
+                distinctio?<br><br>
+                Dignissimos eum alias voluptatibus autem nobis excepturi?
             </p>
         </div>
     </section>
@@ -115,6 +118,52 @@
             </div>
         </div>
     </section>
+    <section id="contact">
+        <div class="content contact-heading">
+            <h2>Contact Me</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur saepe aliquam quasi corporis, nihil alias.
+            </p>
+        </div>
+        <div class="content contact-container">
+            <div class="contact-form">
+                <div class="contact-full-name">
+                    <div class="contact-item contact-first-name">
+                        <input type="text" placeholder="&#xf007; First Name">
+                    </div>
+                    <div class="contact-item contact-last-name">
+                        <input type="text" placeholder="&#xf007; Last Name">
+                    </div>
+                </div>
+                <div class="contact-item contact-email">
+                    <input type="text" placeholder="&#xf0e0; Email Address">
+                </div>  
+                <div class="contact-item contact-message">
+                    <input type="text" placeholder="Your Message">
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>
+                        <i class="fa fa-phone"></i> (+62)81 414 9980
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope"></i> info@yourdomain.com
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker"></i> 99 S.t Jomblo Park Pekanbaru 28292, Indonesia
+                    </p>
+                    <h3>Follow My Socials</h3>
+                    <div class="follow-me">
+                        <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-top">
             <div class="footer-text-container">
@@ -127,9 +176,10 @@
             </div>
             <div class="footer-social-media">
                 <ul>
-                    <li><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="https://github.com/ezrazka" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -139,9 +189,9 @@
             </div>
             <div class="footer-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
