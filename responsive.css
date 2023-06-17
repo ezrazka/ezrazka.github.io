@@ -1,7 +1,125 @@
 /* Tablet / iPad screen */
 @media only screen and (width <= 768px) {
+	#about {
+		flex-direction: column-reverse;
+	}
+
+	.introduction {
+		width: 80%;
+	}
+
+	.my-photo {
+		width: 80%;
+		margin-top: 20%;
+	}
+
+	.contact-container {
+		width: 80%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact-form {
+		width: 100%;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		font-size: 1rem;
+	}
+
+	.contact-form input {
+		height: 2.75rem;
+	}
+
+	.contact-form textarea {
+		height: 12rem;
+	}
+
+	.contact-info-container {
+		width: 100%;
+		margin-top: 5%;
+	}
+
+	.footer-text-container {
+		width: 60%;
+	}
 }
 
 /* Phone screen */
 @media only screen and (width <= 576px) {
+	.main-nav {
+		display: none;
+	}
+
+	.footer-text-container {
+		width: 80%;
+	}
+
+	.footer-heading {
+		font-size: xx-large;
+	}
+
+	.footer-description {
+		display: none;
+	}
+	.footer-bottom {
+		justify-content: center;
+	}
+
+	.footer-nav {
+		display: none;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		font-size: x-small;
+	}
+
+	.contact-form input {
+		height: 1.75rem;
+	}
+
+	.contact-form textarea {
+		height: 7rem;
+	}
+
+	.contact-info {
+		width: 100%;
+		align-items: center;
+	}
+
+	.contact-info ul {
+		width: 65%;
+	}
+
+	.follow-me {
+		width: 60%;
+		justify-content: space-around;
+	}
+
+	footer {
+		height: 200px;
+	}
+
+	.footer-social-media ul {
+		width: 100%;
+	}
+
+	.footer-social-media ul li a {
+		color: whitesmoke;
+		justify-content: space-around;
+		padding-inline: 0;
+	}
+
+	.footer-social-media ul li a {
+		color: whitesmoke;
+		justify-content: space-around;
+	}
+
+	.footer-bottom {
+		height: 30px;
+		align-items: center;
+	}
 }
