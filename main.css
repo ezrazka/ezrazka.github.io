@@ -163,44 +163,62 @@ section {
 	color: gainsboro;
 }
 
-.content-my-photo,
-.content-introduction {
+.my-photo,
+.introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: left;
 }
 
-.content-my-photo {
+.my-photo {
 	width: 40%;
 }
 
-.content-introduction {
+.introduction {
 	width: 40%;
 	margin-left: 20px;
 }
 
-.content-my-photo {
+.my-photo {
+	position: relative;
+	height: 200px;
 	align-items: center;
 }
 
-.content-my-photo img {
+.my-photo img {
+	position: absolute;
 	width: 50%;
 	border-radius: 50%;
 	box-shadow: 5px 5px 10px 0 #161928;
 	transition-duration: 0.5s;
+	cursor: pointer;
+	backface-visibility: hidden;
+	top: -10%;
+	left: 25%;
 }
 
-.content-my-photo img:hover {
-	transform: scale(1.1);
-	transition-duration: 1s;
+.front-image img {
+	transform: rotateY(0deg);
 }
 
-.content-introduction h3 {
+.my-photo.clicked .front-image img {
+	transform: rotateY(180deg);
+}
+
+.back-image img {
+	transform: rotateY(180deg);
+}
+
+.my-photo.clicked .back-image img {
+	transform: rotateY(360deg);
+}
+
+.introduction h3 {
 	font-size: 2.5rem;
 	color: white;
 }
 
-.content-introduction h3 .gradient {
+.introduction h3 .gradient {
 	background-image: linear-gradient(
 		to bottom right,
 		var(--page-neon-green),
@@ -211,7 +229,7 @@ section {
 	color: transparent;
 }
 
-.content-introduction p {
+.introduction p {
 	margin-top: 25px;
 }
 
