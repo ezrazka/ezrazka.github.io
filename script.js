@@ -8,3 +8,9 @@ window.addEventListener('scroll', () => {
 
   document.querySelector('.main-nav-container').classList.toggle('background', scrollPosition > 0);
 });
+
+const image = document.querySelector('.my-photo');
+  
+image.addEventListener('click', () => {
+  image.classList.toggle('clicked');
+});
