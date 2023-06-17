@@ -1,0 +1,7 @@
+/* Tablet / iPad screen */
+@media only screen and (width <= 768px) {
+}
+
+/* Phone screen */
+@media only screen and (width <= 576px) {
+}
