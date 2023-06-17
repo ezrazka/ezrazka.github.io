@@ -60,10 +60,13 @@ header {
 	transform: translateZ(0);
 }
 
-.main-nav-container,
 .main-heading-container {
 	position: relative;
 	z-index: 1;
+}
+
+.main-nav-container {
+	z-index: 999;
 }
 
 .main-nav-container {
