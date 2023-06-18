@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 window.addEventListener('scroll', () => {
   let scrollPosition = window.scrollY;
