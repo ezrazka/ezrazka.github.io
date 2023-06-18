@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(33, 33, 33);
+    align-items: center;
+}
+
+.planets-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: scaleX(5);
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(252, 246, 133);
+    box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+    transform: scaleX(0.2);
+    position: relative;
+    animation: hideSun 6s infinite linear;
+}
+
+.planet {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    transform: scaleX(0.2);
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gainsboro;
+    transform: scaleX(0.2);
+    animation: spinAround 3s infinite linear;
+}
+
+.planet-route {
+    width: 100%;
+    animation: revolve 6s infinite linear;
+    position: absolute;
+}
+
+.planet-container {
+    width: 60px;
+    height: 60px;
+    animation: correct 6s infinite linear;
+    position: absolute;
+}
+
+.moon-route {
+    width: 100%;
+    animation: revolve 6s infinite linear;
+    position: absolute;
+}
+
+.moon-container {
+    animation: correct 6s infinite linear;
+    position: absolute;
+}
+
+.moon-follow {
+    width: 60px;
+    height: 60px;
+    transform: scaleX(0.2);
+}
+
+.planet-index {
+    width: 100%;
+    height: 100%;
+    animation: resizePlanet 6s infinite linear;
+    position: absolute;
+}
+
+.moon-index {
+    width: 100%;
+    height: 100%;
+    animation: resizePlanet 6s infinite linear;
+    position: absolute;
+}
+
+@keyframes revolve {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes correct {
+    0% {
+        transform: rotateZ(360deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes spinAround {
+    from {
+      transform: rotate(0deg) translate(60px);
+    }
+    to {
+      transform: rotate(360deg) translate(60px);
+    }
+}
+
+@keyframes resizePlanet {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hideSun {
+    0% {
+        z-index: -999;
+    }
+    40% {
+        z-index: 999;
+    }
+}
