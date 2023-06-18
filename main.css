@@ -116,7 +116,7 @@ header {
 .main-nav ul li a {
 	display: inline-block;
 	text-decoration: none;
-	color: white;
+	color: inherit;
 	transition: transform 0.25s, color 0.25s;
 }
 
@@ -682,22 +682,18 @@ footer {
 	justify-content: space-between;
 }
 
-.copyright,
-.footer-nav {
-	display: flex;
-	align-items: center;
-}
-
 .copyright {
+	color: whitesmoke;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
-	color: whitesmoke;
 	text-shadow: 1px solid black;
 	margin: 15px;
 }
 
 .footer-nav {
+	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 
 .footer-nav ul {
