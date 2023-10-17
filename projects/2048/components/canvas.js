@@ -16,10 +16,15 @@ const blockCoords = [
 ];
 
 // CONFIG GAME
-const fps = 13;
+let fps = 13;
 let start = false;
 let win = false;
 let gameOver = false;
 
 let score = 0;
-let grid = Array.from({ length: 4 }, () => Array(4).fill(null));
+let grid = [
+    [null, null, null, null,],
+    [null, null, null, null],
+    [null, null, null, null],
+    [null, null, null, null]
+]

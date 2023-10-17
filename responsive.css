@@ -53,16 +53,6 @@
 		display: none;
 	}
 
-	.project-container {
-		transform: none;
-	}
-
-	.project-card {
-		position: static;
-		margin: 0;
-		/* border: none; */
-	}
-
 	.footer-text-container {
 		width: 80%;
 	}
@@ -120,6 +110,7 @@
 	.footer-social-media ul li a {
 		color: whitesmoke;
 		justify-content: space-around;
+		padding-inline: 0;
 	}
 
 	.footer-social-media ul li a {
