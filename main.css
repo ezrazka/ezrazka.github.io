@@ -16,12 +16,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgb(80, 77, 94);
+	background-color: rgb(64, 61, 77);
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background-color: rgb(64, 61, 77);
+	background-color: rgb(80, 77, 94);
 }
 
 * {
@@ -40,36 +40,39 @@ body {
 	background-color: var(--page-indigo);
 }
 
-header {
+#home {
 	position: relative;
 	width: 100%;
 	height: 80vh;
 	color: white;
-	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	perspective: 80vh;
 }
 
 .parallax-background {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
 	background-image: url("assets/images/hero.jpg");
-	background-blend-mode: multiply;
+	filter: brightness(0.5);
 	background-size: cover;
 	background-position: center;
-	transform: translateZ(0);
+	transform: translateZ(-500px) scale(300px);
+	z-index: -1;
 }
 
 .main-heading-container {
 	position: relative;
-	z-index: 1;
 }
 
 .main-nav-container {
 	position: fixed;
+	width: 100vw;
 	height: 60px;
 	display: flex;
-	width: 100vw;
 	justify-content: space-around;
 	align-items: center;
 	transition: transform 1s color 1s;
@@ -268,7 +271,8 @@ section {
 
 .project-card {
 	position: relative;
-	max-width: 25%;
+	box-sizing: border-box;
+	width: 28%;
 	aspect-ratio: 2/3;
 	background-color: var(--page-blue);
 	border-radius: 10px;
@@ -278,6 +282,7 @@ section {
 	text-shadow: -1px 0 rgb(49, 52, 59), 0 1px rgb(49, 52, 59),
 		1px 0 rgb(49, 52, 59), 0 -1px rgb(49, 52, 59);
 	box-shadow: 5px 5px 10px 0 #161928;
+	cursor: default;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -285,10 +290,12 @@ section {
 	padding: 20px;
 	margin-left: -200px;
 	transition: transform 1s, outline 0.5s;
+
+	overflow: hidden;
 }
 
 .project-card:hover {
-	transform: translateX(-155px);
+	transform: translateX(-50%);
 }
 
 .project-card:nth-of-type(1) {
@@ -348,11 +355,11 @@ section {
 .project-text {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5em;
+	gap: 0.5rem;
 }
 
 .project-description {
-	height: 5em;
+	height: 6em;
 	color: snow;
 }
 
@@ -386,11 +393,6 @@ section {
 .project-card a {
 	color: #1e90ff;
 }
-
-/* .project-image img {
-	width: 100%;
-	height: 100%;
-} */
 
 #contact {
 	flex-direction: column;
@@ -454,7 +456,7 @@ section {
 	border: 2px solid #3a526d;
 	outline: 0;
 	padding-inline: 0.5rem;
-	transition: background-color 0.1s, border 0.3s;
+	transition: background-color 0.1s, border-color 0.3s;
 }
 
 .contact-form textarea {
@@ -500,7 +502,7 @@ section {
 }
 
 .contact-form:valid button[type="submit"]:active {
-	filter: brightness(60%);
+	filter: brightness(0.6);
 }
 
 .contact-info-container {
@@ -681,6 +683,7 @@ footer {
 	border-top: 1px solid rgb(34, 30, 36);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .copyright {

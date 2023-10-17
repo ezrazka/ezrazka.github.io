@@ -201,6 +201,9 @@ section.content-two > .container {
 	width: 80%;
 	height: 100%;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 section.content-two > .container > h1 {
@@ -312,6 +315,7 @@ section.content-three {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 6rem;
+	gap: 0.5rem;
 }
 
 section.content-three > h1 {

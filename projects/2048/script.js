@@ -116,42 +116,18 @@ document.addEventListener('keydown', (event) => {
     switch (event.code) {
         case "ArrowUp":
             moveUp();
-            if (checkWin()) {
-                win = true;
-            }
-            if (checkGameOver()) {
-                gameOver = true;
-            }
             addBlock()
             break;
         case "ArrowDown":
             moveDown();
-            if (checkWin()) {
-                win = true;
-            }
-            if (checkGameOver()) {
-                gameOver = true;
-            }
             addBlock()
             break;
         case "ArrowRight":
             moveRight();
-            if (checkWin()) {
-                win = true;
-            }
-            if (checkGameOver()) {
-                gameOver = true;
-            }
             addBlock()
             break;
         case "ArrowLeft":
             moveLeft();
-            if (checkWin()) {
-                win = true;
-            }
-            if (checkGameOver()) {
-                gameOver = true;
-            }
             addBlock()
             break;
     }
@@ -176,15 +152,23 @@ const mainloop = setInterval(() => {
     } else {
         startButton.draw();
     }
+
+    if (checkWin()) {
+        win = true;
+    }
+
+    if (checkGameOver()) {
+        gameOver = true;
+    }
     
     if (win) {
         winText.draw();
         clearInterval(mainloop);
-        document.getElementById("canvas").classList.add("gameEnd");
+        document.getElementById("canvas").classList.add("win");
     }
     if (gameOver) {
         gameOverText.draw();
         clearInterval(mainloop);
-        document.getElementById("canvas").classList.add("gameEnd");
+        document.getElementById("canvas").classList.add("gameOver");
     }
 }, 1000/fps);
